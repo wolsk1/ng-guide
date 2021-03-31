@@ -1,4 +1,6 @@
 TODO
+- Life cycle hooks
+- Change detection
 - Dependecy injection
 - Components
 - Directives
