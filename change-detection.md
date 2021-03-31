@@ -10,4 +10,7 @@ Default change detection
 
 On-Push change detection
 
-Links: https://www.mokkapps.de/blog/the-last-guide-for-angular-change-detection-you-will-ever-need/
+Links: 
+- https://www.mokkapps.de/blog/the-last-guide-for-angular-change-detection-you-will-ever-need/
+- https://angular.io/api/core/ChangeDetectionStrategy
+- https://angular.io/api/core/ChangeDetectorRef
