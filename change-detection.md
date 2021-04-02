@@ -14,3 +14,28 @@ Links:
 - https://www.mokkapps.de/blog/the-last-guide-for-angular-change-detection-you-will-ever-need/
 - https://angular.io/api/core/ChangeDetectionStrategy
 - https://angular.io/api/core/ChangeDetectorRef
+- https://blog.angular-university.io/how-does-angular-2-change-detection-really-work/
+
+How is change detection implemented?
+Angular can detect when component data changes, and then automatically re-render the view to reflect that change. But how can it do so after such a low-level event like the click of a button, that can happen anywhere on the page?
+
+To understand how this works, we need to start by realizing that in Javascript the whole runtime is overridable by design. We can override functions in String or Number if we so want.
+
+Browser Async APIs supported
+The following frequently used browser mechanisms are patched to support change detection:
+
+all browser events (click, mouseover, keyup, etc.)
+setTimeout() and setInterval()
+Ajax HTTP requests
+In fact, many other browser APIs are patched by Zone.js to transparently trigger Angular change detection, such as for example Websockets. Have a look at the Zone.js test specifications to see what is currently supported.
+
+One limitation of this mechanism is that if by some reason an asynchronous browser API is not supported by Zone.js, then change detection will not be triggered. This is, for example, the case of IndexedDB callbacks.
+
+This explains how change detection gets triggered, but once triggered how does it actually work?
+
+
+How does the default change detection mechanism work?
+This method might look strange at first, with all the strangely named variables. But by digging deeper into it, we notice that it's doing something very simple: for each expression used in the template, it's comparing the current value of the property used in the expression with the previous value of that property.
+
+If the property value before and after is different, it will set isChanged to true, and that's it! Well almost, it's comparing values by using a method called
+looseNotIdentical(), which is really just a === comparison with special logic for the NaN case (see here).
