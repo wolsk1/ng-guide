@@ -1,5 +1,12 @@
 # Change detection
 
+Links: 
+- https://www.mokkapps.de/blog/the-last-guide-for-angular-change-detection-you-will-ever-need/
+- https://angular.io/api/core/ChangeDetectionStrategy
+- https://angular.io/api/core/ChangeDetectorRef
+- https://blog.angular-university.io/how-does-angular-2-change-detection-really-work/
+- https://blog.angular-university.io/onpush-change-detection-how-it-works/
+
 ![Angular change detection](https://www.mokkapps.de/static/208f64143869f05d2219a1e9735b9ab3/15ec7/change-detector-ref.jpg)
 
 
@@ -16,14 +23,6 @@ By default, Angular uses the ChangeDetectionStrategy.Default change detection st
 
 ![Angular change detection](https://d33wubrfki0l68.cloudfront.net/ed2650c2a4930cee5d17ddc92b0448031bb8e7fd/a240b/e9c151a1260485a277c6928b5f19019b/cd-on-push-cycle.gif)
 
-
-
-
-Links: 
-- https://www.mokkapps.de/blog/the-last-guide-for-angular-change-detection-you-will-ever-need/
-- https://angular.io/api/core/ChangeDetectionStrategy
-- https://angular.io/api/core/ChangeDetectorRef
-- https://blog.angular-university.io/how-does-angular-2-change-detection-really-work/
 
 ## How is change detection implemented?
 Angular can detect when component data changes, and then automatically re-render the view to reflect that change. But how can it do so after such a low-level event like the click of a button, that can happen anywhere on the page?
