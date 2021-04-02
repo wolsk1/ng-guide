@@ -11,3 +11,4 @@ TODO
 - Eager/ Lazy loading
 - Modules
 - AOT
+- Ivy lazy loading
