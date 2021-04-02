@@ -1,5 +1,7 @@
 Change detection
 
+![Angular change detection](https://www.mokkapps.de/static/208f64143869f05d2219a1e9735b9ab3/15ec7/change-detector-ref.jpg)
+
 
 Default change detection
 
