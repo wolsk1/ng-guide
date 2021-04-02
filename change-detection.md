@@ -6,6 +6,8 @@ Links:
 - https://angular.io/api/core/ChangeDetectorRef
 - https://blog.angular-university.io/how-does-angular-2-change-detection-really-work/
 - https://blog.angular-university.io/onpush-change-detection-how-it-works/
+- https://netbasal.com/a-comprehensive-guide-to-angular-onpush-change-detection-strategy-5bac493074a4
+- https://blog.thoughtram.io/angular/2016/02/22/angular-2-change-detection-explained.html
 
 ![Angular change detection](https://www.mokkapps.de/static/208f64143869f05d2219a1e9735b9ab3/15ec7/change-detector-ref.jpg)
 
