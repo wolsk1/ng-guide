@@ -55,12 +55,15 @@ The built-in AsyncPipe subscribes to an observable and returns the latest value 
 
 Internally the AsyncPipe calls markForCheck each time a new value is emitted, see its source code:
 
+```javascript
 private _updateLatestValue(async: any, value: Object): void {
   if (async === this._obj) {
     this._latestValue = value;
     this._ref.markForCheck();
   }
 }
+```
+
 As shown, the AsyncPipe automatically works using OnPush change detection strategy. So it is recommended to use it as much as possible to easier perform a later switch from default change detection strategy to OnPush.
 
 You can see this behavior in action in the async demo.
